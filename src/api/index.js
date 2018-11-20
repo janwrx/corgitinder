@@ -1,4 +1,4 @@
-const BASE = 'http://localhost:3000'
+const BASE = 'https://shrouded-fjord-30897.herokuapp.com/'
 
 let getCorgis = function() {
   return fetch(BASE + '/corgis')
