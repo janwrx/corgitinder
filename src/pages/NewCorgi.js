@@ -56,10 +56,8 @@ class NewCorgi extends Component {
             />
           </FormGroup>
         <Button onClick={this.handleChange2}id="submit" type="submit">Create Corgi</Button>
-        {this.props.success &&
-          <Redirect to="/Corgis" />
-        }
       </form>
+      {this.props.newCorgiSuccess && <Redirect to="/Corgis" />}
     </div>
     );
   }

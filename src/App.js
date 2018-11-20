@@ -12,8 +12,7 @@ class App extends Component {
     super(props)
     this.state = {
       corgis: [],
-      newCorgiSuccess: false
-    }
+      newCorgiSuccess: false    }
   }
 
   componentDidMount() {
@@ -26,6 +25,7 @@ class App extends Component {
     })
   }
 
+
   handleNewCorgi = (newCorgi) => {
     console.log("New Corgi TRY", newCorgi)
     createCorgi(newCorgi)
@@ -37,6 +37,12 @@ class App extends Component {
     })
   }
 
+  submitCorgi = (corgi) => {
+    let corgis = this.state.corgis
+    corgis[corgis.length] = {id: (corgis.length), name: corgi.name, age: corgi.age, enjoys: corgi.enjoys}
+    console.log(corgis)
+    this.setState({corgis: corgis})
+  }
 
   render() {
     return (
@@ -44,9 +50,9 @@ class App extends Component {
         <Header />
         <Router>
           <Switch>
+            <Route path="Corgis/:id" component={ShowCorgi} />
             <Route exact path="/Corgis" render={(props) => <Corgis corgis={this.state.corgis}/>} />
-            <Route exact path="/NewCorgi" render={(props) => <NewCorgi handleNewCorgi={this.handleNewCorgi}/>} />
-            <Route path="Corgis/:id" component={ShowCorgi}/>} />
+            <Route exact path="/NewCorgi" render={(props) => <NewCorgi handleNewCorgi={this.handleNewCorgi} newCorgiSuccess={this.state.newCorgiSuccess}/>} />
           </Switch>
         </Router>
       </div>
