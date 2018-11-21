@@ -40,7 +40,7 @@ class App extends Component {
   submitCorgi = (corgi) => {
     let corgis = this.state.corgis
     corgis[corgis.length] = {id: (corgis.length), name: corgi.name, age: corgi.age, enjoys: corgi.enjoys}
-    console.log(corgis)
+    console.log("HELLO")
     this.setState({corgis: corgis})
   }
 
@@ -52,7 +52,7 @@ class App extends Component {
           <Switch>
             <Route path="Corgis/:id" component={ShowCorgi} />
             <Route exact path="/Corgis" render={(props) => <Corgis corgis={this.state.corgis}/>} />
-            <Route exact path="/NewCorgi" render={(props) => <NewCorgi handleNewCorgi={this.handleNewCorgi} submitCorgi={this.state.submitCorgi} newCorgiSuccess={this.state.newCorgiSuccess}/>} />
+            <Route exact path="/NewCorgi" render={(props) => <NewCorgi handleNewCorgi={this.handleNewCorgi} submitCorgi={this.submitCorgi} newCorgiSuccess={this.state.newCorgiSuccess}/>} />
           </Switch>
         </Router>
       </div>
