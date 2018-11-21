@@ -30,10 +30,11 @@ class App extends Component {
     console.log("New Corgi TRY", newCorgi)
     createCorgi(newCorgi)
     .then(successCorgi => {
-      let updatedList = corgis << successCorgi;
+      let updatedList = this.corgis << successCorgi;
       // corgis list with successCorgi added
       console.log("SUCCESS! New corgi: ", successCorgi);
       this.setState({
+        corgis:
         newCorgiSuccess: true
       })
     })
