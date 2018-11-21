@@ -48,7 +48,6 @@ class App extends Component {
     return (
       <div>
         <Header />
-        <Navbar />
         <Router>
           <Switch>
             <Route path="Corgis/:id" component={ShowCorgi} />
