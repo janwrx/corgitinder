@@ -6,7 +6,6 @@ class Header extends Component {
     return (
 //       <h1><img src="https://i.imgur.com/lzfFx8o.jpg" width="50px" height="100px"/>
 // </h1>
-<div>
 <nav class="navbar navbar-default">
 <div class="container-fluid">
 <div class="navbar-header">
@@ -48,7 +47,6 @@ class Header extends Component {
 </div>
 </div>
 </nav>
-</div>
 );
   }
 }
