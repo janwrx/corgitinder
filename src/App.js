@@ -34,7 +34,7 @@ class App extends Component {
       // corgis list with successCorgi added
       console.log("SUCCESS! New corgi: ", successCorgi);
       this.setState({
-        corgis: ,
+        corgis: [],
         newCorgiSuccess: true
       })
     })
