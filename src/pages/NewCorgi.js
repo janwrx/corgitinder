@@ -23,6 +23,7 @@ class NewCorgi extends Component {
   handleChange2 = (e) => {
     e.preventDefault()
     console.log('hello')
+    this.props.submitCorgi(this.state.form)
     this.props.handleNewCorgi(this.state.form)
   }
 

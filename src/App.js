@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Header from './components/Header';
+import Navbar from './components/Navbar';
 import Corgis from './pages/Corgis';
 import NewCorgi from './pages/NewCorgi';
 import ShowCorgi from './pages/ShowCorgi';
@@ -48,11 +49,12 @@ class App extends Component {
     return (
       <div>
         <Header />
+        <Navbar />
         <Router>
           <Switch>
             <Route path="Corgis/:id" component={ShowCorgi} />
             <Route exact path="/Corgis" render={(props) => <Corgis corgis={this.state.corgis}/>} />
-            <Route exact path="/NewCorgi" render={(props) => <NewCorgi handleNewCorgi={this.handleNewCorgi} newCorgiSuccess={this.state.newCorgiSuccess}/>} />
+            <Route exact path="/NewCorgi" render={(props) => <NewCorgi handleNewCorgi={this.handleNewCorgi} submitCorgi={this.state.submitCorgi} newCorgiSuccess={this.state.newCorgiSuccess}/>} />
           </Switch>
         </Router>
       </div>
