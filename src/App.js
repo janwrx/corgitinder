@@ -54,15 +54,15 @@ class App extends Component {
       <Navbar>
   <Navbar.Header>
     <Navbar.Brand>
-      <a href="#home">React-Bootstrap</a>
+      <a href="#home">Plenty Of Corgis</a>
     </Navbar.Brand>
   </Navbar.Header>
   <Nav>
-    <NavItem eventKey={1} href="#">
-      Link
+    <NavItem eventKey={1} href="/pages/NewCorgi">
+      Add yo'self!
     </NavItem>
-    <NavItem eventKey={2} href="#">
-      Link
+    <NavItem eventKey={2} href="/pages/Corgis">
+      View All
     </NavItem>
     <NavDropdown eventKey={3} title="Dropdown" id="basic-nav-dropdown">
       <MenuItem eventKey={3.1}>Action</MenuItem>
