@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { FormControl, FormGroup, ControlLabel, Button } from 'react-bootstrap';
+import { FormControl, FormGroup, ControlLabel, Button, Navbar } from 'react-bootstrap';
 import { Redirect } from 'react-router-dom';
 
 class NewCorgi extends Component {
