@@ -4,7 +4,7 @@ import Header from './components/Header';
 import Corgis from './pages/Corgis';
 import NewCorgi from './pages/NewCorgi';
 import ShowCorgi from './pages/ShowCorgi';
-import { Navbar } from 'react-bootstrap';
+import { Navbar, Nav, NavItem, NavDropdown, MenuItem } from 'react-bootstrap';
 
 import { getCorgis, createCorgi, getCorgi } from './api';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
@@ -51,7 +51,6 @@ class App extends Component {
   render() {
     return (
       <div>
-
       <Navbar>
   <Navbar.Header>
     <Navbar.Brand>
