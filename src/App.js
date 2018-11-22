@@ -58,10 +58,10 @@ class App extends Component {
     </Navbar.Brand>
   </Navbar.Header>
   <Nav>
-    <NavItem eventKey={1} href="/pages/NewCorgi">
+    <NavItem eventKey={1} href="/NewCorgi">
       Add yo'self!
     </NavItem>
-    <NavItem eventKey={2} href="/pages/Corgis">
+    <NavItem eventKey={2} href="/Corgis">
       View All
     </NavItem>
     <NavDropdown eventKey={3} title="Dropdown" id="basic-nav-dropdown">
